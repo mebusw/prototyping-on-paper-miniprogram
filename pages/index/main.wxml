@@ -1,0 +1,10 @@
+<!--pages/index/main.wxml-->
+<view class="container">
+  <text>{{prjName}}</text>
+  <view class=''>
+  <image class='user-pic' src='{{pics[0].path}}'></image>
+  </view>
+  <view class="usermotto">
+    <button bindtap='bindLoadPic'>拍照或选取</button>
+  </view>
+</view>

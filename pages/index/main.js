@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    prjName: 'A Demo Project',
+    prjName: 'U Perform',
     pics: []
   },
 
@@ -29,10 +29,22 @@ Page({
         const tempFilePaths = res.tempFilePaths
         console.info(res.tempFiles)
         that.setData({ 'pics': res.tempFiles})
+        wx.setStorage({
+          key: 'pics',
+          data: res.tempFiles
+        })
       }
     })
   },
 
+  tapToPicDetail() {
+    wx.navigateTo({
+      url: './picdetail',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

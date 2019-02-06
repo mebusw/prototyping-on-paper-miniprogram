@@ -1,0 +1,10 @@
+/* pages/index/picdetail.wxss */
+.pic-detail {
+  width: 300rpx;
+  height: 400rpx;
+  margin: 10rpx;
+  border-radius: 1%;
+  border-color: blue;
+  border-style: solid;
+  border: 1px;
+}

@@ -1,0 +1,15 @@
+<!--pages/index/picdetail.wxml-->
+<view class="section">
+
+  <view class="section__title">
+  <button size='mini'>Done</button>
+  <button size='mini'>Add Link</button>
+  </view>
+
+  <!-- TODO add mask on top of the scalable pic -->
+  <movable-area style="height: 480px; width: 320px; background: red; margin: auto;" scale-area>
+    <movable-view class="pic-detail" direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="2">
+    <image src="{{picPath}}" class="pic-detail"></image>
+    </movable-view>
+  </movable-area>
+</view>

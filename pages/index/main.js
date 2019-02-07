@@ -1,6 +1,7 @@
 // pages/index/main.js
 const app = getApp()
 
+
 Page({
 
   /**
@@ -8,13 +9,27 @@ Page({
    */
   data: {
     prjName: 'U Perform',
-    pics: []
+    projects: [{'pics':[], 'links':[]}]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
+    wx.getStorage({
+      key: 'projects',
+      success(res) {
+        console.log(res.data)
+        that.setData({ 'projects': res.data })
+      },
+      fail(res){
+        wx.setStorage({
+          key: 'projects',
+          data: [{ 'pics': [], 'links': [] }]
+        })
+      }
+    })
 
   },
 
@@ -28,10 +43,13 @@ Page({
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
         console.info(res.tempFiles)
-        that.setData({ 'pics': res.tempFiles})
+
+        var p = that.data.projects
+        p[0].pics = res.tempFiles
+        that.setData({ 'projects': p})
         wx.setStorage({
-          key: 'pics',
-          data: res.tempFiles
+          key: 'projects',
+          data: that.data.projects
         })
       }
     })

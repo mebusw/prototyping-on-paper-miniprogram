@@ -7,7 +7,9 @@ Page({
   data: {
     x: 0,
     y: 0,
-    picPath: ''
+    projects: [],
+    picPath: '',
+    picNum: 0
   },
 
   tap(e) {
@@ -31,14 +33,30 @@ Page({
   onLoad: function(options) {
     var that = this
     wx.getStorage({
-      key: 'pics',
+      key: 'projects',
       success(res) {
         console.log(res.data)
-        that.setData({'picPath': res.data[0].path})
+        var projects = res.data
+        that.setData({ 'projects': projects})
+        that.setData({'picPath': projects[0].pics[0].path})
       }
     })
   },
 
+  addLink() {
+    var that = this
+    var links = that.data.projects[0].links
+    console.info(links)
+
+    wx.setStorage({
+      key: 'projects',
+      data: that.data.projects
+    })
+  },
+
+  done() {
+    wx.navigateBack({})
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

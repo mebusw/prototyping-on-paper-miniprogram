@@ -2,8 +2,8 @@
 <view class="section">
 
   <view class="section__title">
-  <button size='mini'>Done</button>
-  <button size='mini'>Add Link</button>
+  <button size='mini' bindtap='done'>Done</button>
+  <button size='mini' bindtap='addLink'>Add Link</button>
   </view>
 
   <!-- TODO add mask on top of the scalable pic -->

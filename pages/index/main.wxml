@@ -2,8 +2,8 @@
 <view class="container">
   <text>{{prjName}}</text>
   <view class=''>
-  <image class='user-pic' src='{{pics[0].path}}' bindtap='tapToPicDetail'></image>
-  <image class='user-pic' src='{{pics[1].path}}'></image>
+  <image class='user-pic' src='{{projects[0].pics[0].path}}' bindtap='tapToPicDetail'></image>
+  <image class='user-pic' src='{{projects[0].pics[1].path}}' bindtap='tapToPicDetail'></image>
   </view>
   <view class="usermotto">
     <button bindtap='bindLoadPic'>拍照或选取</button>

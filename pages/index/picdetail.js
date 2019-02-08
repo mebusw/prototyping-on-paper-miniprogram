@@ -31,14 +31,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.info('onLoad')
     var that = this
+    console.log(options)
+    var picnum = options.picnum
     wx.getStorage({
       key: 'projects',
       success(res) {
         console.log(res.data)
         var projects = res.data
         that.setData({ 'projects': projects})
-        that.setData({'picPath': projects[0].pics[0].path})
+        that.setData({ 'picPath': projects[0].pics[picnum].path})
       }
     })
   },

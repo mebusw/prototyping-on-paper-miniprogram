@@ -57,7 +57,7 @@ Page({
 
   tapToPicDetail() {
     wx.navigateTo({
-      url: './picdetail',
+      url: './picdetail?picnum=1',
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},

@@ -27,6 +27,7 @@ Page({
         wx.setStorage({
           key: 'projects',
           data: [{ 'pics': [], 'links': [] }]
+          //[{ pics: [{path: '', touchBlocks:[{x:0, y:0, h:9, w:9, linkToPicNum: 1, transition: 'fadeIn', isActive: true}]  }], prjName:''}]
         })
       }
     })

@@ -34,7 +34,7 @@ Page({
 
   },
 
-  bindLoadPic: function () {
+  loadPic: function () {
     var that =this
     wx.chooseImage({
       count: 9, // max, default is 9
@@ -53,6 +53,15 @@ Page({
           data: that.data.projects
         })
       }
+    })
+  },
+
+  play() {
+    wx.navigateTo({
+      url: './playing',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
 

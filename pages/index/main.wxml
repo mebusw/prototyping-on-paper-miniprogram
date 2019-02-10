@@ -6,6 +6,7 @@
   <image class='user-pic' src='{{projects[0].pics[1].path}}' bindtap='tapToPicDetail'></image>
   </view>
   <view class="usermotto">
-    <button bindtap='bindLoadPic'>拍照或选取</button>
+    <button bindtap='loadPic'>拍照或选取</button>
+    <button bindtap='play'>播放</button>
   </view>
 </view>

@@ -1,5 +1,5 @@
 <!--pages/index/playing.wxml-->
 <view bindtap='tap' bindlongtap='longtap'>
-<image src="{{picPathA}}" mode="scaleToFill" style='z-index:{{zBufferA}}' id='bufferA' class='screen'></image>
-<image src="{{picPathB}}" mode="scaleToFill" style='z-index:{{zBufferB}}' id='bufferB' class='screen'></image>
+  <image src="{{picPathA}}" mode="scaleToFill" style='z-index:{{zBufferA}};' id='bufferA' class='screen' animation="{{animationDataA}}"></image>
+  <image src="{{picPathB}}" mode="scaleToFill" style='z-index:{{zBufferB}};' id='bufferB' class='screen' animation="{{animationDataB}}"></image>
 </view>
